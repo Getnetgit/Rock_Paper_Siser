@@ -21,8 +21,9 @@ function rpsGame(){
     let continueGame=0;
     do {
         userResult=0;
-        computerResult=0;
+        continueGame=0;
         let round=0
+        
        do {
             
             userPlay();
@@ -49,6 +50,8 @@ function rpsGame(){
                 alert("SCORE\nUser:"+"  " + userResult +"\nComputer:"+"  " + computerResult);
                 if (confirm("Do you want to continue playing?")) {
                     continueGame=1;
+                }else{
+                    continueGame=0;
                 }
             }
         }while (round<3)
